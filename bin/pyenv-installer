@@ -69,13 +69,13 @@ fi
 if [ -n "${USE_SSH}" ]; then
   GITHUB="git@github.com:"
 else
-  GITHUB="https://github.com/"
+  GITHUB="https://gitee.com/"
 fi
 
-checkout "${GITHUB}pyenv/pyenv.git"            "${PYENV_ROOT}"                           "${PYENV_GIT_TAG:-master}"
-checkout "${GITHUB}pyenv/pyenv-doctor.git"     "${PYENV_ROOT}/plugins/pyenv-doctor"      "master"
-checkout "${GITHUB}pyenv/pyenv-update.git"     "${PYENV_ROOT}/plugins/pyenv-update"      "master"
-checkout "${GITHUB}pyenv/pyenv-virtualenv.git" "${PYENV_ROOT}/plugins/pyenv-virtualenv"  "master"
+checkout "${GITHUB}mikePengW/pyenv.git"            "${PYENV_ROOT}"                           "${PYENV_GIT_TAG:-master}"
+checkout "${GITHUB}mikePengW/pyenv-doctor.git"     "${PYENV_ROOT}/plugins/pyenv-doctor"      "master"
+checkout "${GITHUB}mikePengW/pyenv-update.git"     "${PYENV_ROOT}/plugins/pyenv-update"      "master"
+checkout "${GITHUB}mikePengW/pyenv-virtualenv.git" "${PYENV_ROOT}/plugins/pyenv-virtualenv"  "master"
 
 if ! command -v pyenv 1>/dev/null; then
   { echo
